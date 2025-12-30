@@ -5,9 +5,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Royal Aviation</title>
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- AOS CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -22,12 +30,17 @@
                         <img src="./assets/nav-logo.png" alt="">
                     </a>
                 </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
+
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="offcanvas offcanvas-end bg-black" id="navbarSupportedContent">
+                    <!-- <div class="offcanvas-header d-block d-xl-none">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+                        <button type="button" class="btn-close bg-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div> -->
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -90,7 +103,6 @@
                     <a class="primary-btn" href="">
                         <span>Book Your Flight</span>
                         <img src="./assets/flight-logo.png" alt="">
-                        <div class="matrix-effect"></div>
                     </a>
                 </div>
             </div>
@@ -105,14 +117,16 @@
                     <span>hello dreamer!</span>
                 </div>
                 <div class="dreamer-cntn">
-                    <h2 class="title2">
+                    <h2 class="title2" data-aos="zoom-in" data-aos-duration="2000">
                         your perfect day with <span>royal aviation club</span>
                     </h2>
                     <div class="dreamer-video">
                         <div class="video-cntn">
                             <img class="vid-bg" src="./assets/dreamer-bg.png" alt="">
-                            <a href="">
-                                <img src="./assets/Polygon.png" alt="">
+                            <a class="d-flex justify-content-center align-items-center" href="">
+                                <div class="video-icon">
+                                    <img src="./assets/Polygon.png" alt="">
+                                </div>
                             </a>
                         </div>
                     </div>
@@ -136,97 +150,292 @@
                 </div>
             </div>
             <div class="dream-hdr dream-body">
-                <h2 class="title2">"Discover the Art of Luxury Travel with <span>Private Jets</span>”</h2>
-                <p>Private air travel designed around you, not the other way around.</p>
+                <h2 class="title2" data-aos="zoom-in" data-aos-duration="1000">"Discover the Art of Luxury Travel with
+                    <span>Private Jets</span>”
+                </h2>
+                <p data-aos="zoom-in" data-aos-duration="2000">Private air travel designed around you, not the other way
+                    around.</p>
             </div>
-            <div class="row align-items-center dream-card">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="jet mx-auto">
-                        <img src="./assets/1st-card.png" alt="">
-                        <div class="jet-desc">
-                            <h3>dassaultt falcon 7x</h3>
-                            <p>capacity upto 15 people </p>
-                            <a href="" class="d-inline-block position-absolute text-decoration-none">
-                                <span class="d-flex align-items-center">
-                                    Book Now
-                                    <img src="./assets/flight-logo.png" alt="">
-                                </span>
-                            </a>
+            <div class="row">
+                <div class="col-12 col-lg-6 col-xl-4 mb-2 mb-sm-5">
+                    <div class="dream-card" data-aos="flip-right" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
+                        <div class="card-img">
+                            <img src="./assets/1st-plane.png" alt="">
+                        </div>
+                        <div class="card-desc desc-1">
+                            <svg width="451" height="180" viewBox="0 0 451 180" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <foreignObject x="-34.2" y="-34.2" width="519.4" height="248.4">
+                                    <div xmlns="http://www.w3.org/1999/xhtml"
+                                        style="backdrop-filter:blur(17.1px);clip-path:url(#bgblur_0_335_505_clip_path);height:100%;width:100%">
+                                    </div>
+                                </foreignObject>
+                                <g data-figma-bg-blur-radius="34.2">
+                                    <mask id="path-1-inside-1_335_505" fill="white">
+                                        <path
+                                            d="M425 0C439.359 1.12745e-06 451 11.6406 451 26V154C451 168.359 439.359 180 425 180H336.458C328.18 180 322.66 169.552 322.976 161.279C322.992 160.854 323 160.428 323 160C323 141.775 308.225 127 290 127H161C142.775 127 128 141.775 128 160C128 160.428 128.008 160.854 128.024 161.279C128.34 169.552 122.82 180 114.541 180H26C11.6406 180 6.12085e-07 168.359 0 154V26C2.06176e-06 11.6406 11.6406 2.1945e-07 26 0H425Z" />
+                                    </mask>
+                                    <path
+                                        d="M425 0C439.359 1.12745e-06 451 11.6406 451 26V154C451 168.359 439.359 180 425 180H336.458C328.18 180 322.66 169.552 322.976 161.279C322.992 160.854 323 160.428 323 160C323 141.775 308.225 127 290 127H161C142.775 127 128 141.775 128 160C128 160.428 128.008 160.854 128.024 161.279C128.34 169.552 122.82 180 114.541 180H26C11.6406 180 6.12085e-07 168.359 0 154V26C2.06176e-06 11.6406 11.6406 2.1945e-07 26 0H425Z"
+                                        fill="#080806" fill-opacity="0.92" />
+                                    <path
+                                        d="M425 0V-1V0ZM451 26H452H451ZM451 154H452H451ZM425 180V181V180ZM161 127V126V127ZM26 180V181V180ZM0 154H-1H0ZM0 26H-1H0ZM26 0V-1V0ZM128.024 161.279L127.025 161.317L128.024 161.279ZM322.976 161.279L321.976 161.241L322.976 161.279ZM425 0V1C438.807 1 450 12.1929 450 26H451H452C452 11.0883 439.912 -0.999999 425 -1V0ZM451 26H450V154H451H452V26H451ZM451 154H450C450 167.807 438.807 179 425 179V180V181C439.912 181 452 168.912 452 154H451ZM425 180V179H336.458V180V181H425V180ZM322.976 161.279L323.975 161.317C323.992 160.88 324 160.441 324 160H323H322C322 160.415 321.992 160.829 321.976 161.241L322.976 161.279ZM323 160H324C324 141.222 308.778 126 290 126V127V128C307.673 128 322 142.327 322 160H323ZM290 127V126H161V127V128H290V127ZM161 127V126C142.222 126 127 141.222 127 160H128H129C129 142.327 143.327 128 161 128V127ZM128 160H127C127 160.441 127.008 160.88 127.025 161.317L128.024 161.279L129.024 161.241C129.008 160.829 129 160.415 129 160H128ZM114.541 180V179H26V180V181H114.541V180ZM26 180V179C12.1929 179 1 167.807 1 154H0H-1C-0.999999 168.912 11.0883 181 26 181V180ZM0 154H1V26H0H-1V154H0ZM0 26H1C1 12.1929 12.1929 1 26 1V0V-1C11.0883 -1 -0.999998 11.0883 -1 26H0ZM26 0V1H425V0V-1H26V0ZM128.024 161.279L127.025 161.317C127.175 165.24 125.934 169.718 123.668 173.196C121.399 176.679 118.221 179 114.541 179V180V181C119.141 181 122.862 178.097 125.344 174.288C127.828 170.473 129.189 165.59 129.024 161.241L128.024 161.279ZM336.458 180V179C332.779 179 329.601 176.679 327.332 173.196C325.066 169.718 323.825 165.24 323.975 161.317L322.976 161.279L321.976 161.241C321.811 165.59 323.172 170.473 325.656 174.288C328.138 178.097 331.859 181 336.458 181V180Z"
+                                        fill="#DBC761" fill-opacity="0.3" mask="url(#path-1-inside-1_335_505)" />
+                                </g>
+                                <defs>
+                                    <clipPath id="bgblur_0_335_505_clip_path" transform="translate(34.2 34.2)">
+                                        <path
+                                            d="M425 0C439.359 1.12745e-06 451 11.6406 451 26V154C451 168.359 439.359 180 425 180H336.458C328.18 180 322.66 169.552 322.976 161.279C322.992 160.854 323 160.428 323 160C323 141.775 308.225 127 290 127H161C142.775 127 128 141.775 128 160C128 160.428 128.008 160.854 128.024 161.279C128.34 169.552 122.82 180 114.541 180H26C11.6406 180 6.12085e-07 168.359 0 154V26C2.06176e-06 11.6406 11.6406 2.1945e-07 26 0H425Z" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <div class="plane-desc">
+                                <h5>dassaultt falcon 7x</h5>
+                                <p>capacity upto 15 people</p>
+                                <div class="booknow-btn">
+                                    <a class="secondary-btn">
+                                        <span>Book Now
+                                            <img src="./assets/flight-logo.png" alt="">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="jet mx-auto">
-                        <img src="./assets/2nd-card.png" alt="">
-                        <div class="jet-desc">
-                            <h3>dassaultt falcon 7x</h3>
-                            <p>capacity upto 15 people </p>
-                            <a href="" class="d-inline-block position-absolute text-decoration-none">
-                                <span class="d-flex align-items-center">
-                                    Book Now
-                                    <img src="./assets/flight-logo.png" alt="">
-                                </span>
-                            </a>
+                <div class="col-12 col-lg-6 col-xl-4 mb-2 mb-sm-5">
+                    <div class="dream-card" data-aos="flip-right" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
+                        <div class="card-img">
+                            <img src="./assets/2nd-plane.png" alt="">
+                        </div>
+                        <div class="card-desc">
+                            <svg width="451" height="180" viewBox="0 0 451 180" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <foreignObject x="-34.2" y="-34.2" width="519.4" height="248.4">
+                                    <div xmlns="http://www.w3.org/1999/xhtml"
+                                        style="backdrop-filter:blur(17.1px);clip-path:url(#bgblur_0_335_505_clip_path);height:100%;width:100%">
+                                    </div>
+                                </foreignObject>
+                                <g data-figma-bg-blur-radius="34.2">
+                                    <mask id="path-1-inside-1_335_505" fill="white">
+                                        <path
+                                            d="M425 0C439.359 1.12745e-06 451 11.6406 451 26V154C451 168.359 439.359 180 425 180H336.458C328.18 180 322.66 169.552 322.976 161.279C322.992 160.854 323 160.428 323 160C323 141.775 308.225 127 290 127H161C142.775 127 128 141.775 128 160C128 160.428 128.008 160.854 128.024 161.279C128.34 169.552 122.82 180 114.541 180H26C11.6406 180 6.12085e-07 168.359 0 154V26C2.06176e-06 11.6406 11.6406 2.1945e-07 26 0H425Z" />
+                                    </mask>
+                                    <path
+                                        d="M425 0C439.359 1.12745e-06 451 11.6406 451 26V154C451 168.359 439.359 180 425 180H336.458C328.18 180 322.66 169.552 322.976 161.279C322.992 160.854 323 160.428 323 160C323 141.775 308.225 127 290 127H161C142.775 127 128 141.775 128 160C128 160.428 128.008 160.854 128.024 161.279C128.34 169.552 122.82 180 114.541 180H26C11.6406 180 6.12085e-07 168.359 0 154V26C2.06176e-06 11.6406 11.6406 2.1945e-07 26 0H425Z"
+                                        fill="#080806" fill-opacity="0.92" />
+                                    <path
+                                        d="M425 0V-1V0ZM451 26H452H451ZM451 154H452H451ZM425 180V181V180ZM161 127V126V127ZM26 180V181V180ZM0 154H-1H0ZM0 26H-1H0ZM26 0V-1V0ZM128.024 161.279L127.025 161.317L128.024 161.279ZM322.976 161.279L321.976 161.241L322.976 161.279ZM425 0V1C438.807 1 450 12.1929 450 26H451H452C452 11.0883 439.912 -0.999999 425 -1V0ZM451 26H450V154H451H452V26H451ZM451 154H450C450 167.807 438.807 179 425 179V180V181C439.912 181 452 168.912 452 154H451ZM425 180V179H336.458V180V181H425V180ZM322.976 161.279L323.975 161.317C323.992 160.88 324 160.441 324 160H323H322C322 160.415 321.992 160.829 321.976 161.241L322.976 161.279ZM323 160H324C324 141.222 308.778 126 290 126V127V128C307.673 128 322 142.327 322 160H323ZM290 127V126H161V127V128H290V127ZM161 127V126C142.222 126 127 141.222 127 160H128H129C129 142.327 143.327 128 161 128V127ZM128 160H127C127 160.441 127.008 160.88 127.025 161.317L128.024 161.279L129.024 161.241C129.008 160.829 129 160.415 129 160H128ZM114.541 180V179H26V180V181H114.541V180ZM26 180V179C12.1929 179 1 167.807 1 154H0H-1C-0.999999 168.912 11.0883 181 26 181V180ZM0 154H1V26H0H-1V154H0ZM0 26H1C1 12.1929 12.1929 1 26 1V0V-1C11.0883 -1 -0.999998 11.0883 -1 26H0ZM26 0V1H425V0V-1H26V0ZM128.024 161.279L127.025 161.317C127.175 165.24 125.934 169.718 123.668 173.196C121.399 176.679 118.221 179 114.541 179V180V181C119.141 181 122.862 178.097 125.344 174.288C127.828 170.473 129.189 165.59 129.024 161.241L128.024 161.279ZM336.458 180V179C332.779 179 329.601 176.679 327.332 173.196C325.066 169.718 323.825 165.24 323.975 161.317L322.976 161.279L321.976 161.241C321.811 165.59 323.172 170.473 325.656 174.288C328.138 178.097 331.859 181 336.458 181V180Z"
+                                        fill="#DBC761" fill-opacity="0.3" mask="url(#path-1-inside-1_335_505)" />
+                                </g>
+                                <defs>
+                                    <clipPath id="bgblur_0_335_505_clip_path" transform="translate(34.2 34.2)">
+                                        <path
+                                            d="M425 0C439.359 1.12745e-06 451 11.6406 451 26V154C451 168.359 439.359 180 425 180H336.458C328.18 180 322.66 169.552 322.976 161.279C322.992 160.854 323 160.428 323 160C323 141.775 308.225 127 290 127H161C142.775 127 128 141.775 128 160C128 160.428 128.008 160.854 128.024 161.279C128.34 169.552 122.82 180 114.541 180H26C11.6406 180 6.12085e-07 168.359 0 154V26C2.06176e-06 11.6406 11.6406 2.1945e-07 26 0H425Z" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <div class="plane-desc">
+                                <h5>dassaultt falcon 7x</h5>
+                                <p>capacity upto 15 people</p>
+                                <div class="booknow-btn">
+                                    <a class="secondary-btn">
+                                        <span>Book Now
+                                            <img src="./assets/flight-logo.png" alt="">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="jet mx-auto">
-                        <img src="./assets/3rd-card.png" alt="">
-                        <div class="jet-desc">
-                            <h3>dassaultt falcon 7x</h3>
-                            <p>capacity upto 15 people </p>
-                            <a href="" class="d-inline-block position-absolute text-decoration-none">
-                                <span class="d-flex align-items-center">
-                                    Book Now
-                                    <img src="./assets/flight-logo.png" alt="">
-                                </span>
-                            </a>
+                <div class="col-12 col-lg-6 col-xl-4 mb-2 mb-sm-5">
+                    <div class="dream-card" data-aos="flip-right" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
+                        <div class="card-img">
+                            <img src="./assets/3rd-plane.png" alt="">
+                        </div>
+                        <div class="card-desc">
+                            <svg width="451" height="180" viewBox="0 0 451 180" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <foreignObject x="-34.2" y="-34.2" width="519.4" height="248.4">
+                                    <div xmlns="http://www.w3.org/1999/xhtml"
+                                        style="backdrop-filter:blur(17.1px);clip-path:url(#bgblur_0_335_505_clip_path);height:100%;width:100%">
+                                    </div>
+                                </foreignObject>
+                                <g data-figma-bg-blur-radius="34.2">
+                                    <mask id="path-1-inside-1_335_505" fill="white">
+                                        <path
+                                            d="M425 0C439.359 1.12745e-06 451 11.6406 451 26V154C451 168.359 439.359 180 425 180H336.458C328.18 180 322.66 169.552 322.976 161.279C322.992 160.854 323 160.428 323 160C323 141.775 308.225 127 290 127H161C142.775 127 128 141.775 128 160C128 160.428 128.008 160.854 128.024 161.279C128.34 169.552 122.82 180 114.541 180H26C11.6406 180 6.12085e-07 168.359 0 154V26C2.06176e-06 11.6406 11.6406 2.1945e-07 26 0H425Z" />
+                                    </mask>
+                                    <path
+                                        d="M425 0C439.359 1.12745e-06 451 11.6406 451 26V154C451 168.359 439.359 180 425 180H336.458C328.18 180 322.66 169.552 322.976 161.279C322.992 160.854 323 160.428 323 160C323 141.775 308.225 127 290 127H161C142.775 127 128 141.775 128 160C128 160.428 128.008 160.854 128.024 161.279C128.34 169.552 122.82 180 114.541 180H26C11.6406 180 6.12085e-07 168.359 0 154V26C2.06176e-06 11.6406 11.6406 2.1945e-07 26 0H425Z"
+                                        fill="#080806" fill-opacity="0.92" />
+                                    <path
+                                        d="M425 0V-1V0ZM451 26H452H451ZM451 154H452H451ZM425 180V181V180ZM161 127V126V127ZM26 180V181V180ZM0 154H-1H0ZM0 26H-1H0ZM26 0V-1V0ZM128.024 161.279L127.025 161.317L128.024 161.279ZM322.976 161.279L321.976 161.241L322.976 161.279ZM425 0V1C438.807 1 450 12.1929 450 26H451H452C452 11.0883 439.912 -0.999999 425 -1V0ZM451 26H450V154H451H452V26H451ZM451 154H450C450 167.807 438.807 179 425 179V180V181C439.912 181 452 168.912 452 154H451ZM425 180V179H336.458V180V181H425V180ZM322.976 161.279L323.975 161.317C323.992 160.88 324 160.441 324 160H323H322C322 160.415 321.992 160.829 321.976 161.241L322.976 161.279ZM323 160H324C324 141.222 308.778 126 290 126V127V128C307.673 128 322 142.327 322 160H323ZM290 127V126H161V127V128H290V127ZM161 127V126C142.222 126 127 141.222 127 160H128H129C129 142.327 143.327 128 161 128V127ZM128 160H127C127 160.441 127.008 160.88 127.025 161.317L128.024 161.279L129.024 161.241C129.008 160.829 129 160.415 129 160H128ZM114.541 180V179H26V180V181H114.541V180ZM26 180V179C12.1929 179 1 167.807 1 154H0H-1C-0.999999 168.912 11.0883 181 26 181V180ZM0 154H1V26H0H-1V154H0ZM0 26H1C1 12.1929 12.1929 1 26 1V0V-1C11.0883 -1 -0.999998 11.0883 -1 26H0ZM26 0V1H425V0V-1H26V0ZM128.024 161.279L127.025 161.317C127.175 165.24 125.934 169.718 123.668 173.196C121.399 176.679 118.221 179 114.541 179V180V181C119.141 181 122.862 178.097 125.344 174.288C127.828 170.473 129.189 165.59 129.024 161.241L128.024 161.279ZM336.458 180V179C332.779 179 329.601 176.679 327.332 173.196C325.066 169.718 323.825 165.24 323.975 161.317L322.976 161.279L321.976 161.241C321.811 165.59 323.172 170.473 325.656 174.288C328.138 178.097 331.859 181 336.458 181V180Z"
+                                        fill="#DBC761" fill-opacity="0.3" mask="url(#path-1-inside-1_335_505)" />
+                                </g>
+                                <defs>
+                                    <clipPath id="bgblur_0_335_505_clip_path" transform="translate(34.2 34.2)">
+                                        <path
+                                            d="M425 0C439.359 1.12745e-06 451 11.6406 451 26V154C451 168.359 439.359 180 425 180H336.458C328.18 180 322.66 169.552 322.976 161.279C322.992 160.854 323 160.428 323 160C323 141.775 308.225 127 290 127H161C142.775 127 128 141.775 128 160C128 160.428 128.008 160.854 128.024 161.279C128.34 169.552 122.82 180 114.541 180H26C11.6406 180 6.12085e-07 168.359 0 154V26C2.06176e-06 11.6406 11.6406 2.1945e-07 26 0H425Z" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <div class="plane-desc">
+                                <h5>dassaultt falcon 7x</h5>
+                                <p>capacity upto 15 people</p>
+                                <div class="booknow-btn">
+                                    <a class="secondary-btn">
+                                        <span>Book Now
+                                            <img src="./assets/flight-logo.png" alt="">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="jet mx-auto">
-                        <img src="./assets/4th-card.png" alt="">
-                        <div class="jet-desc">
-                            <h3>dassaultt falcon 7x</h3>
-                            <p>capacity upto 15 people </p>
-                            <a href="" class="d-inline-block position-absolute text-decoration-none">
-                                <span class="d-flex align-items-center">
-                                    Book Now
-                                    <img src="./assets/flight-logo.png" alt="">
-                                </span>
-                            </a>
+                <div class="col-12 col-lg-6 col-xl-4 mb-2 mb-sm-5">
+                    <div class="dream-card" data-aos="flip-right" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
+                        <div class="card-img">
+                            <img src="./assets/4th-plane.png" alt="">
+                        </div>
+                        <div class="card-desc desc-3">
+                            <svg width="451" height="180" viewBox="0 0 451 180" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <foreignObject x="-34.2" y="-34.2" width="519.4" height="248.4">
+                                    <div xmlns="http://www.w3.org/1999/xhtml"
+                                        style="backdrop-filter:blur(17.1px);clip-path:url(#bgblur_0_335_505_clip_path);height:100%;width:100%">
+                                    </div>
+                                </foreignObject>
+                                <g data-figma-bg-blur-radius="34.2">
+                                    <mask id="path-1-inside-1_335_505" fill="white">
+                                        <path
+                                            d="M425 0C439.359 1.12745e-06 451 11.6406 451 26V154C451 168.359 439.359 180 425 180H336.458C328.18 180 322.66 169.552 322.976 161.279C322.992 160.854 323 160.428 323 160C323 141.775 308.225 127 290 127H161C142.775 127 128 141.775 128 160C128 160.428 128.008 160.854 128.024 161.279C128.34 169.552 122.82 180 114.541 180H26C11.6406 180 6.12085e-07 168.359 0 154V26C2.06176e-06 11.6406 11.6406 2.1945e-07 26 0H425Z" />
+                                    </mask>
+                                    <path
+                                        d="M425 0C439.359 1.12745e-06 451 11.6406 451 26V154C451 168.359 439.359 180 425 180H336.458C328.18 180 322.66 169.552 322.976 161.279C322.992 160.854 323 160.428 323 160C323 141.775 308.225 127 290 127H161C142.775 127 128 141.775 128 160C128 160.428 128.008 160.854 128.024 161.279C128.34 169.552 122.82 180 114.541 180H26C11.6406 180 6.12085e-07 168.359 0 154V26C2.06176e-06 11.6406 11.6406 2.1945e-07 26 0H425Z"
+                                        fill="#080806" fill-opacity="0.92" />
+                                    <path
+                                        d="M425 0V-1V0ZM451 26H452H451ZM451 154H452H451ZM425 180V181V180ZM161 127V126V127ZM26 180V181V180ZM0 154H-1H0ZM0 26H-1H0ZM26 0V-1V0ZM128.024 161.279L127.025 161.317L128.024 161.279ZM322.976 161.279L321.976 161.241L322.976 161.279ZM425 0V1C438.807 1 450 12.1929 450 26H451H452C452 11.0883 439.912 -0.999999 425 -1V0ZM451 26H450V154H451H452V26H451ZM451 154H450C450 167.807 438.807 179 425 179V180V181C439.912 181 452 168.912 452 154H451ZM425 180V179H336.458V180V181H425V180ZM322.976 161.279L323.975 161.317C323.992 160.88 324 160.441 324 160H323H322C322 160.415 321.992 160.829 321.976 161.241L322.976 161.279ZM323 160H324C324 141.222 308.778 126 290 126V127V128C307.673 128 322 142.327 322 160H323ZM290 127V126H161V127V128H290V127ZM161 127V126C142.222 126 127 141.222 127 160H128H129C129 142.327 143.327 128 161 128V127ZM128 160H127C127 160.441 127.008 160.88 127.025 161.317L128.024 161.279L129.024 161.241C129.008 160.829 129 160.415 129 160H128ZM114.541 180V179H26V180V181H114.541V180ZM26 180V179C12.1929 179 1 167.807 1 154H0H-1C-0.999999 168.912 11.0883 181 26 181V180ZM0 154H1V26H0H-1V154H0ZM0 26H1C1 12.1929 12.1929 1 26 1V0V-1C11.0883 -1 -0.999998 11.0883 -1 26H0ZM26 0V1H425V0V-1H26V0ZM128.024 161.279L127.025 161.317C127.175 165.24 125.934 169.718 123.668 173.196C121.399 176.679 118.221 179 114.541 179V180V181C119.141 181 122.862 178.097 125.344 174.288C127.828 170.473 129.189 165.59 129.024 161.241L128.024 161.279ZM336.458 180V179C332.779 179 329.601 176.679 327.332 173.196C325.066 169.718 323.825 165.24 323.975 161.317L322.976 161.279L321.976 161.241C321.811 165.59 323.172 170.473 325.656 174.288C328.138 178.097 331.859 181 336.458 181V180Z"
+                                        fill="#DBC761" fill-opacity="0.3" mask="url(#path-1-inside-1_335_505)" />
+                                </g>
+                                <defs>
+                                    <clipPath id="bgblur_0_335_505_clip_path" transform="translate(34.2 34.2)">
+                                        <path
+                                            d="M425 0C439.359 1.12745e-06 451 11.6406 451 26V154C451 168.359 439.359 180 425 180H336.458C328.18 180 322.66 169.552 322.976 161.279C322.992 160.854 323 160.428 323 160C323 141.775 308.225 127 290 127H161C142.775 127 128 141.775 128 160C128 160.428 128.008 160.854 128.024 161.279C128.34 169.552 122.82 180 114.541 180H26C11.6406 180 6.12085e-07 168.359 0 154V26C2.06176e-06 11.6406 11.6406 2.1945e-07 26 0H425Z" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <div class="plane-desc">
+                                <h5>dassaultt falcon 7x</h5>
+                                <p>capacity upto 15 people</p>
+                                <div class="booknow-btn">
+                                    <a class="secondary-btn">
+                                        <span>Book Now
+                                            <img src="./assets/flight-logo.png" alt="">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="jet mx-auto">
-                        <img src="./assets/5th-card.png" alt="">
-                        <div class="jet-desc">
-                            <h3>dassaultt falcon 7x</h3>
-                            <p>capacity upto 15 people </p>
-                            <a href="" class="d-inline-block position-absolute text-decoration-none">
-                                <span class="d-flex align-items-center">
-                                    Book Now
-                                    <img src="./assets/flight-logo.png" alt="">
-                                </span>
-                            </a>
+                <div class="col-12 col-lg-6 col-xl-4 mb-2 mb-sm-5">
+                    <div class="dream-card" data-aos="flip-right" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
+                        <div class="card-img">
+                            <img src="./assets/5th-plane.png" alt="">
+                        </div>
+                        <div class="card-desc desc-2">
+                            <svg width="451" height="180" viewBox="0 0 451 180" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <foreignObject x="-34.2" y="-34.2" width="519.4" height="248.4">
+                                    <div xmlns="http://www.w3.org/1999/xhtml"
+                                        style="backdrop-filter:blur(17.1px);clip-path:url(#bgblur_0_335_505_clip_path);height:100%;width:100%">
+                                    </div>
+                                </foreignObject>
+                                <g data-figma-bg-blur-radius="34.2">
+                                    <mask id="path-1-inside-1_335_505" fill="white">
+                                        <path
+                                            d="M425 0C439.359 1.12745e-06 451 11.6406 451 26V154C451 168.359 439.359 180 425 180H336.458C328.18 180 322.66 169.552 322.976 161.279C322.992 160.854 323 160.428 323 160C323 141.775 308.225 127 290 127H161C142.775 127 128 141.775 128 160C128 160.428 128.008 160.854 128.024 161.279C128.34 169.552 122.82 180 114.541 180H26C11.6406 180 6.12085e-07 168.359 0 154V26C2.06176e-06 11.6406 11.6406 2.1945e-07 26 0H425Z" />
+                                    </mask>
+                                    <path
+                                        d="M425 0C439.359 1.12745e-06 451 11.6406 451 26V154C451 168.359 439.359 180 425 180H336.458C328.18 180 322.66 169.552 322.976 161.279C322.992 160.854 323 160.428 323 160C323 141.775 308.225 127 290 127H161C142.775 127 128 141.775 128 160C128 160.428 128.008 160.854 128.024 161.279C128.34 169.552 122.82 180 114.541 180H26C11.6406 180 6.12085e-07 168.359 0 154V26C2.06176e-06 11.6406 11.6406 2.1945e-07 26 0H425Z"
+                                        fill="#080806" fill-opacity="0.92" />
+                                    <path
+                                        d="M425 0V-1V0ZM451 26H452H451ZM451 154H452H451ZM425 180V181V180ZM161 127V126V127ZM26 180V181V180ZM0 154H-1H0ZM0 26H-1H0ZM26 0V-1V0ZM128.024 161.279L127.025 161.317L128.024 161.279ZM322.976 161.279L321.976 161.241L322.976 161.279ZM425 0V1C438.807 1 450 12.1929 450 26H451H452C452 11.0883 439.912 -0.999999 425 -1V0ZM451 26H450V154H451H452V26H451ZM451 154H450C450 167.807 438.807 179 425 179V180V181C439.912 181 452 168.912 452 154H451ZM425 180V179H336.458V180V181H425V180ZM322.976 161.279L323.975 161.317C323.992 160.88 324 160.441 324 160H323H322C322 160.415 321.992 160.829 321.976 161.241L322.976 161.279ZM323 160H324C324 141.222 308.778 126 290 126V127V128C307.673 128 322 142.327 322 160H323ZM290 127V126H161V127V128H290V127ZM161 127V126C142.222 126 127 141.222 127 160H128H129C129 142.327 143.327 128 161 128V127ZM128 160H127C127 160.441 127.008 160.88 127.025 161.317L128.024 161.279L129.024 161.241C129.008 160.829 129 160.415 129 160H128ZM114.541 180V179H26V180V181H114.541V180ZM26 180V179C12.1929 179 1 167.807 1 154H0H-1C-0.999999 168.912 11.0883 181 26 181V180ZM0 154H1V26H0H-1V154H0ZM0 26H1C1 12.1929 12.1929 1 26 1V0V-1C11.0883 -1 -0.999998 11.0883 -1 26H0ZM26 0V1H425V0V-1H26V0ZM128.024 161.279L127.025 161.317C127.175 165.24 125.934 169.718 123.668 173.196C121.399 176.679 118.221 179 114.541 179V180V181C119.141 181 122.862 178.097 125.344 174.288C127.828 170.473 129.189 165.59 129.024 161.241L128.024 161.279ZM336.458 180V179C332.779 179 329.601 176.679 327.332 173.196C325.066 169.718 323.825 165.24 323.975 161.317L322.976 161.279L321.976 161.241C321.811 165.59 323.172 170.473 325.656 174.288C328.138 178.097 331.859 181 336.458 181V180Z"
+                                        fill="#DBC761" fill-opacity="0.3" mask="url(#path-1-inside-1_335_505)" />
+                                </g>
+                                <defs>
+                                    <clipPath id="bgblur_0_335_505_clip_path" transform="translate(34.2 34.2)">
+                                        <path
+                                            d="M425 0C439.359 1.12745e-06 451 11.6406 451 26V154C451 168.359 439.359 180 425 180H336.458C328.18 180 322.66 169.552 322.976 161.279C322.992 160.854 323 160.428 323 160C323 141.775 308.225 127 290 127H161C142.775 127 128 141.775 128 160C128 160.428 128.008 160.854 128.024 161.279C128.34 169.552 122.82 180 114.541 180H26C11.6406 180 6.12085e-07 168.359 0 154V26C2.06176e-06 11.6406 11.6406 2.1945e-07 26 0H425Z" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <div class="plane-desc">
+                                <h5>dassaultt falcon 7x</h5>
+                                <p>capacity upto 15 people</p>
+                                <div class="booknow-btn">
+                                    <a class="secondary-btn">
+                                        <span>Book Now
+                                            <img src="./assets/flight-logo.png" alt="">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="jet mx-auto">
-                        <img src="./assets/6th-card.png" alt="">
-                        <div class="jet-desc">
-                            <h3>dassaultt falcon 7x</h3>
-                            <p>capacity upto 15 people </p>
-                            <a href="" class="d-inline-block position-absolute text-decoration-none">
-                                <span class="d-flex align-items-center">
-                                    Book Now
-                                    <img src="./assets/flight-logo.png" alt="">
-                                </span>
-                            </a>
+                <div class="col-12 col-lg-6 col-xl-4 mb-2 mb-sm-5">
+                    <div class="dream-card" data-aos="flip-right" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
+                        <div class="card-img">
+                            <img src="./assets/6th-plane.png" alt="">
+                        </div>
+                        <div class="card-desc">
+                            <svg width="451" height="180" viewBox="0 0 451 180" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <foreignObject x="-34.2" y="-34.2" width="519.4" height="248.4">
+                                    <div xmlns="http://www.w3.org/1999/xhtml"
+                                        style="backdrop-filter:blur(17.1px);clip-path:url(#bgblur_0_335_505_clip_path);height:100%;width:100%">
+                                    </div>
+                                </foreignObject>
+                                <g data-figma-bg-blur-radius="34.2">
+                                    <mask id="path-1-inside-1_335_505" fill="white">
+                                        <path
+                                            d="M425 0C439.359 1.12745e-06 451 11.6406 451 26V154C451 168.359 439.359 180 425 180H336.458C328.18 180 322.66 169.552 322.976 161.279C322.992 160.854 323 160.428 323 160C323 141.775 308.225 127 290 127H161C142.775 127 128 141.775 128 160C128 160.428 128.008 160.854 128.024 161.279C128.34 169.552 122.82 180 114.541 180H26C11.6406 180 6.12085e-07 168.359 0 154V26C2.06176e-06 11.6406 11.6406 2.1945e-07 26 0H425Z" />
+                                    </mask>
+                                    <path
+                                        d="M425 0C439.359 1.12745e-06 451 11.6406 451 26V154C451 168.359 439.359 180 425 180H336.458C328.18 180 322.66 169.552 322.976 161.279C322.992 160.854 323 160.428 323 160C323 141.775 308.225 127 290 127H161C142.775 127 128 141.775 128 160C128 160.428 128.008 160.854 128.024 161.279C128.34 169.552 122.82 180 114.541 180H26C11.6406 180 6.12085e-07 168.359 0 154V26C2.06176e-06 11.6406 11.6406 2.1945e-07 26 0H425Z"
+                                        fill="#080806" fill-opacity="0.92" />
+                                    <path
+                                        d="M425 0V-1V0ZM451 26H452H451ZM451 154H452H451ZM425 180V181V180ZM161 127V126V127ZM26 180V181V180ZM0 154H-1H0ZM0 26H-1H0ZM26 0V-1V0ZM128.024 161.279L127.025 161.317L128.024 161.279ZM322.976 161.279L321.976 161.241L322.976 161.279ZM425 0V1C438.807 1 450 12.1929 450 26H451H452C452 11.0883 439.912 -0.999999 425 -1V0ZM451 26H450V154H451H452V26H451ZM451 154H450C450 167.807 438.807 179 425 179V180V181C439.912 181 452 168.912 452 154H451ZM425 180V179H336.458V180V181H425V180ZM322.976 161.279L323.975 161.317C323.992 160.88 324 160.441 324 160H323H322C322 160.415 321.992 160.829 321.976 161.241L322.976 161.279ZM323 160H324C324 141.222 308.778 126 290 126V127V128C307.673 128 322 142.327 322 160H323ZM290 127V126H161V127V128H290V127ZM161 127V126C142.222 126 127 141.222 127 160H128H129C129 142.327 143.327 128 161 128V127ZM128 160H127C127 160.441 127.008 160.88 127.025 161.317L128.024 161.279L129.024 161.241C129.008 160.829 129 160.415 129 160H128ZM114.541 180V179H26V180V181H114.541V180ZM26 180V179C12.1929 179 1 167.807 1 154H0H-1C-0.999999 168.912 11.0883 181 26 181V180ZM0 154H1V26H0H-1V154H0ZM0 26H1C1 12.1929 12.1929 1 26 1V0V-1C11.0883 -1 -0.999998 11.0883 -1 26H0ZM26 0V1H425V0V-1H26V0ZM128.024 161.279L127.025 161.317C127.175 165.24 125.934 169.718 123.668 173.196C121.399 176.679 118.221 179 114.541 179V180V181C119.141 181 122.862 178.097 125.344 174.288C127.828 170.473 129.189 165.59 129.024 161.241L128.024 161.279ZM336.458 180V179C332.779 179 329.601 176.679 327.332 173.196C325.066 169.718 323.825 165.24 323.975 161.317L322.976 161.279L321.976 161.241C321.811 165.59 323.172 170.473 325.656 174.288C328.138 178.097 331.859 181 336.458 181V180Z"
+                                        fill="#DBC761" fill-opacity="0.3" mask="url(#path-1-inside-1_335_505)" />
+                                </g>
+                                <defs>
+                                    <clipPath id="bgblur_0_335_505_clip_path" transform="translate(34.2 34.2)">
+                                        <path
+                                            d="M425 0C439.359 1.12745e-06 451 11.6406 451 26V154C451 168.359 439.359 180 425 180H336.458C328.18 180 322.66 169.552 322.976 161.279C322.992 160.854 323 160.428 323 160C323 141.775 308.225 127 290 127H161C142.775 127 128 141.775 128 160C128 160.428 128.008 160.854 128.024 161.279C128.34 169.552 122.82 180 114.541 180H26C11.6406 180 6.12085e-07 168.359 0 154V26C2.06176e-06 11.6406 11.6406 2.1945e-07 26 0H425Z" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <div class="plane-desc">
+                                <h5>dassaultt falcon 7x</h5>
+                                <p>capacity upto 15 people</p>
+                                <div class="booknow-btn">
+                                    <a class="secondary-btn">
+                                        <span>Book Now
+                                            <img src="./assets/flight-logo.png" alt="">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -244,7 +453,7 @@
     <!-- Jet Service Section -->
     <section class="jet-service-sec">
         <div class="container">
-            <div class="dream-hdr d-flex align-items-center">
+            <div class="dream-hdr d-flex align-items-center position-relative">
                 <div class="left-part">
                     <img src="./assets/left-line.png" alt="">
                 </div>
@@ -256,93 +465,87 @@
                 </div>
             </div>
             <div class="dream-hdr dream-body">
-                <h2 class="title2">our jet charter <span>services</span></span></h2>
-                <p>
+                <h2 class="title2" data-aos="zoom-in" data-aos-duration="1000">our jet charter
+                    <span>services</span></span>
+                </h2>
+                <p data-aos="zoom-in" data-aos-duration="2000">
                     Lorem ipsum dolor sit amet consectetur. In porta et tincidunt tellus volutpat in. Tortor sed
                     maecenas
                 </p>
             </div>
-            <div class="service-card">
-                <div class="jet-card position-sticky p-4 p-lg-5">
-                    <div class="card-items">
-                        <div class="row align-items-center">
-                            <div class="col-12 col-lg-6">
-                                <div class="jet-cntn mb-3 mb-lg-0">
-                                    <div class="subtitle">
-                                        <span class="d-inline-block">Business</span>
-                                    </div>
-                                    <h3 class="title3 mt-3 mb-3"><span>business</span> jet charter</h3>
-                                    <p>
-                                        Check out strategies, ask questions and learn in the most effective way!
-                                    </p>
-                                    <a class="secondary-btn">
-                                        <span>Explore Now
-                                            <img src="./assets/flight-logo.png" alt="">
-                                        </span>
-                                    </a>
-                                </div>
+            <div class="jet-card position-sticky p-4 p-lg-5">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-6">
+                        <div class="jet-cntn mb-3 mb-lg-0">
+                            <div class="subtitle">
+                                <span class="d-inline-block">Business</span>
                             </div>
-                            <div class="col-12 col-lg-6">
-                                <div class="jet-image">
-                                    <img src="./assets/jet-1.png" alt="">
-                                </div>
-                            </div>
+                            <h3 class="title3 mt-3 mb-3"><span>business</span> jet charter</h3>
+                            <p>
+                                Check out strategies, ask questions and learn in the most effective way!
+                            </p>
+                            <a class="secondary-btn">
+                                <span>Explore Now
+                                    <img src="./assets/flight-logo.png" alt="">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="jet-image">
+                            <img src="./assets/jet-1.png" alt="">
                         </div>
                     </div>
                 </div>
-                <div class="jet-card position-sticky p-4 p-lg-5">
-                    <div class="card-items">
-                        <div class="row align-items-center">
-                            <div class="col-12 col-lg-6">
-                                <div class="jet-cntn mb-3 mb-lg-0">
-                                    <div class="subtitle">
-                                        <span class="d-inline-block">Ambulance</span>
-                                    </div>
-                                    <h3 class="title3 mt-3 mb-3">air <span>ambulance</span></h3>
-                                    <p>
-                                        Discuss the market, develop your mindset through networking, and seize
-                                        opportunities!
-                                    </p>
-                                    <a class="secondary-btn">
-                                        <span>Explore Now
-                                            <img src="./assets/flight-logo.png" alt="">
-                                        </span>
-                                    </a>
-                                </div>
+            </div>
+            <div class="jet-card position-sticky p-4 p-lg-5">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-6">
+                        <div class="jet-cntn mb-3 mb-lg-0">
+                            <div class="subtitle">
+                                <span class="d-inline-block">Ambulance</span>
                             </div>
-                            <div class="col-12 col-lg-6">
-                                <div class="jet-image">
-                                    <img src="./assets/jet-2.png" alt="">
-                                </div>
-                            </div>
+                            <h3 class="title3 mt-3 mb-3">air <span>ambulance</span></h3>
+                            <p>
+                                Discuss the market, develop your mindset through networking, and seize
+                                opportunities!
+                            </p>
+                            <a class="secondary-btn">
+                                <span>Explore Now
+                                    <img src="./assets/flight-logo.png" alt="">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="jet-image">
+                            <img src="./assets/jet-2.png" alt="">
                         </div>
                     </div>
                 </div>
-                <div class="jet-card position-sticky p-4 p-lg-5">
-                    <div class="card-items">
-                        <div class="row align-items-center">
-                            <div class="col-12 col-lg-6">
-                                <div class="jet-cntn mb-3 mb-lg-0">
-                                    <div class="subtitle">
-                                        <span class="d-inline-block">Delight</span>
-                                    </div>
-                                    <h3 class="title3 mt-3 mb-3"><span>delight</span> vacation</h3>
-                                    <p>
-                                        Connect with experienced mentors every week to track progress, clear doubts, and
-                                        stay motivated
-                                    </p>
-                                    <a class="secondary-btn">
-                                        <span>Explore Now
-                                            <img src="./assets/flight-logo.png" alt="">
-                                        </span>
-                                    </a>
-                                </div>
+            </div>
+            <div class="jet-card position-sticky p-4 p-lg-5">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-6">
+                        <div class="jet-cntn mb-3 mb-lg-0">
+                            <div class="subtitle">
+                                <span class="d-inline-block">Delight</span>
                             </div>
-                            <div class="col-12 col-lg-6">
-                                <div class="jet-image">
-                                    <img src="./assets/jet-3.png" alt="">
-                                </div>
-                            </div>
+                            <h3 class="title3 mt-3 mb-3"><span>delight</span> vacation</h3>
+                            <p>
+                                Connect with experienced mentors every week to track progress, clear doubts, and
+                                stay motivated
+                            </p>
+                            <a class="secondary-btn">
+                                <span>Explore Now
+                                    <img src="./assets/flight-logo.png" alt="">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="jet-image">
+                            <img src="./assets/jet-3.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -365,66 +568,136 @@
                 </div>
             </div>
             <div class="dream-hdr dream-body">
-                <h2 class="title2">Meet the Minds Behind <span>the Mission</span></h2>
+                <h2 class="title2" data-aos="zoom-in" data-aos-duration="1000">Meet the Minds Behind <span>the
+                        Mission</span></h2>
             </div>
             <div class="team-card">
-                <div class="row">
-                    <div class="member-card col-12 col-md-6 col-lg-3">
-                        <div class="team-wrpr position-relative">
-                            <div class="team-member">
-                                <div class="member-img">
-                                    <div class="member-wrpr">
-                                        <img src="./assets/1st-member.png" alt="">
+                <div class="swiper firstSwiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="team-wrpr position-relative">
+                                <div class="team-member">
+                                    <div class="member-img">
+                                        <div class="member-wrpr">
+                                            <img src="./assets/1st-member.png" alt="">
+                                        </div>
                                     </div>
+                                    <h3>alicia cierra</h3>
+                                    <p>director of royal aviation</p>
+                                    <img src="./assets/ashi2.png" alt="">
                                 </div>
-                                <h3>alicia cierra</h3>
-                                <p>director of royal aviation</p>
-                                <img src="./assets/Ashi.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="team-wrpr position-relative">
+                                <div class="team-member">
+                                    <div class="member-img">
+                                        <div class="member-wrpr">
+                                            <img src="./assets/2nd-member.png" alt="">
+                                        </div>
+                                    </div>
+                                    <h3>sargio marquina</h3>
+                                    <p>managing head</p>
+                                    <img src="./assets/ashi2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="team-wrpr position-relative">
+                                <div class="team-member">
+                                    <div class="member-img">
+                                        <div class="member-wrpr">
+                                            <img src="./assets/3rd-member.png" alt="">
+                                        </div>
+                                    </div>
+                                    <h3>raquel murio</h3>
+                                    <p>head of customer</p>
+                                    <img src="./assets/ashi2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="team-wrpr position-relative">
+                                <div class="team-member">
+                                    <div class="member-img">
+                                        <div class="member-wrpr">
+                                            <img src="./assets/4th-member.png" alt="">
+                                        </div>
+                                    </div>
+                                    <h3>marcedice herara</h3>
+                                    <p>chief executive</p>
+                                    <img src="./assets/ashi2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="team-wrpr position-relative">
+                                <div class="team-member">
+                                    <div class="member-img">
+                                        <div class="member-wrpr">
+                                            <img src="./assets/1st-member.png" alt="">
+                                        </div>
+                                    </div>
+                                    <h3>alicia cierra</h3>
+                                    <p>director of royal aviation</p>
+                                    <img src="./assets/ashi2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="team-wrpr position-relative">
+                                <div class="team-member">
+                                    <div class="member-img">
+                                        <div class="member-wrpr">
+                                            <img src="./assets/2nd-member.png" alt="">
+                                        </div>
+                                    </div>
+                                    <h3>sargio marquina</h3>
+                                    <p>managing head</p>
+                                    <img src="./assets/ashi2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="team-wrpr position-relative">
+                                <div class="team-member">
+                                    <div class="member-img">
+                                        <div class="member-wrpr">
+                                            <img src="./assets/3rd-member.png" alt="">
+                                        </div>
+                                    </div>
+                                    <h3>raquel murio</h3>
+                                    <p>head of customer</p>
+                                    <img src="./assets/ashi2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="team-wrpr position-relative">
+                                <div class="team-member">
+                                    <div class="member-img">
+                                        <div class="member-wrpr">
+                                            <img src="./assets/4th-member.png" alt="">
+                                        </div>
+                                    </div>
+                                    <h3>marcedice herara</h3>
+                                    <p>chief executive</p>
+                                    <img src="./assets/ashi2.png" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="member-card col-12 col-md-6 col-lg-3">
-                        <div class="team-wrpr position-relative">
-                            <div class="team-member">
-                                <div class="member-img">
-                                    <div class="member-wrpr">
-                                        <img src="./assets/2nd-member.png" alt="">
-                                    </div>
-                                </div>
-                                <h3>sargio marquina</h3>
-                                <p>managing head</p>
-                                <img src="./assets/Ashi.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="member-card col-12 col-md-6 col-lg-3">
-                        <div class="team-wrpr position-relative">
-                            <div class="team-member">
-                                <div class="member-img">
-                                    <div class="member-wrpr">
-                                        <img src="./assets/3rd-member.png" alt="">
-                                    </div>
-                                </div>
-                                <h3>raquel murio</h3>
-                                <p>head of customer</p>
-                                <img src="./assets/Ashi.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="member-card col-12 col-md-6 col-lg-3">
-                        <div class="team-wrpr position-relative">
-                            <div class="team-member">
-                                <div class="member-img">
-                                    <div class="member-wrpr">
-                                        <img src="./assets/4th-member.png" alt="">
-                                    </div>
-                                </div>
-                                <h3>marcedice herara</h3>
-                                <p>chief executive</p>
-                                <img src="./assets/Ashi.png" alt="">
-                            </div>
-                        </div>
-                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
                 </div>
             </div>
             <div class="dream-btn">
@@ -458,10 +731,11 @@
                                 <div class="btn-border">
                                     <span>Testimonials</span>
                                 </div>
-                                <h2 class="title2">
+                                <h2 class="title2" data-aos="zoom-in" data-aos-duration="1000">
                                     What Our Clients Say About <span>Flying With Us</span>
                                 </h2>
-                                <div class="testimonial-card flex-column flex-sm-row mb-4">
+                                <div class="testimonial-card flex-column flex-sm-row mb-4" data-aos="fade-left"
+                                    data-aos-duration="500">
                                     <img src="./assets/user5.png" alt="">
                                     <div>
                                         <h5>Mariana Dsouza</h5>
@@ -471,7 +745,8 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="testimonial-card flex-column flex-sm-row">
+                                <div class="testimonial-card flex-column flex-sm-row" data-aos="fade-left"
+                                    data-aos-duration="500">
                                     <img src="./assets/user1.png" alt="">
                                     <div>
                                         <h5>juliana costraa</h5>
@@ -486,7 +761,8 @@
                         <div class="big-testimonial">
                             <div class="row mt-4">
                                 <div class="col-12 col-lg-6">
-                                    <div class="big-test-wrpr">
+                                    <div class="big-test-wrpr" data-aos="flip-right" data-aos-easing="ease-out-cubic"
+                                        data-aos-duration="2000">
                                         <div class="card">
                                             <p>
                                                 Lorem ipsum dolor sit amet consectetur. Arcu elit leo ipsum varius
@@ -514,7 +790,8 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-6">
-                                    <div class="big-test-wrpr">
+                                    <div class="big-test-wrpr" data-aos="flip-right" data-aos-easing="ease-out-cubic"
+                                        data-aos-duration="2000">
                                         <div class="card">
                                             <p>
                                                 Lorem ipsum dolor sit amet consectetur. Arcu elit leo ipsum varius
@@ -542,7 +819,8 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-6">
-                                    <div class="big-test-wrpr">
+                                    <div class="big-test-wrpr" data-aos="flip-right" data-aos-easing="ease-out-cubic"
+                                        data-aos-duration="2000">
                                         <div class="card">
                                             <p>
                                                 Lorem ipsum dolor sit amet consectetur. Arcu elit leo ipsum varius
@@ -570,7 +848,8 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-6">
-                                    <div class="big-test-wrpr">
+                                    <div class="big-test-wrpr" data-aos="flip-right" data-aos-easing="ease-out-cubic"
+                                        data-aos-duration="2000">
                                         <div class="card">
                                             <p>
                                                 Lorem ipsum dolor sit amet consectetur. Arcu elit leo ipsum varius
@@ -600,7 +879,7 @@
                             </div>
                         </div>
                         <div class="read-more-btn">
-                            <a href="" class="btn-border1">
+                            <a href="" class="secondary-btn">
                                 <span>Read More
                                     <img src="./assets/flight-logo.png" alt="">
                                 </span>
@@ -612,24 +891,77 @@
         </div>
     </section>
 
+    <!-- Lifestyle Section -->
+    <section class="lifestyle-sec">
+        <div class="container">
+            <div class="row">
+                <div class="d-none d-xl-block col-6">
+                    <div class="lifestyle-left">
+                        <img src="./assets/lifestyle-bg.png" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 lifestyle-right">
+                    <div class="testimonial-subtitle">
+                        <span>Nothing ventured, nothing gained!</span>
+                    </div>
+                    <div class="lifestyle-hdr">
+                        <h1 class="title1" data-aos="zoom-in" data-aos-duration="1000"><span>30</span> Years</h1>
+                        <p data-aos="fade-left" data-aos-duration="2000">Three Decades, Thousands of Journeys, One
+                            Legacy in the Sky."</p>
+                    </div>
+                    <div class="lifestyle-box" data-aos="flip-right" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
+                        <div class="lifestyle-dec">
+                            <img src="./assets/ashi2.png" alt="">
+                        </div>
+                        <div class="lifestyle-heading">
+                            Elevate Your Lifestyle —
+                            <span>Join Our Aviation Club</span>
+                        </div>
+                        <form action="">
+                            <label for="name">Enter Your Name</label>
+                            <input type="text" name="name" id="name" placeholder="Enter Your name" required>
+
+                            <label for="email">Enter Your Email</label>
+                            <input type="email" name="email" id="email" placeholder="Enter Your Email"
+                                value="@gmail.com" required>
+
+                            <label for="phn-no">Enter Your Contact No.</label>
+                            <input type="tel" name="phn-no" id="phn-no" value="+91" required>
+
+                            <button type="submit" class="subscribe-btn d-flex align-items-center mx-auto">
+                                <a href="" class="secondary-btn">
+                                    <span>Subscribe Now
+                                        <img src="./assets/flight-logo.png" alt="">
+                                    </span>
+                                </a>
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer Section -->
     <section class="footer-sec">
         <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-3">
-                    <div class="footer-logo">
+            <div class="row align-items-center pb-5 position-relative">
+                <div class="col-12 col-md-6 col-lg-4 mb-5 mb-md-0">
+                    <a class="footer-logo" data-aos="zoom-in" data-aos-duration="2000">
                         <img src="./assets/footer-logo.png" alt="">
-                    </div>
-                    <p>
+                    </a>
+                    <p class="about-royal" data-aos="fade-right" data-aos-duration="1000">
                         royal aviation, a trusted choice for those valuing time, service, and reliability Explore unique
                         features to customize your private flying experience your way
                     </p>
-                    <a href="" class="footer-call">
+                    <a href="" class="footer-call" data-aos="fade-left" data-aos-duration="2000">
                         <img src="./assets/Phone.png" alt="">
                         <span>IN +91-11-40689002</span>
                     </a>
                 </div>
-                <div class="col-12 col-lg-3">
+                <div class="col-6 col-md-3 col-lg-2">
                     <div class="footer-links">
                         <ul class="footer-list">
                             <li>
@@ -656,7 +988,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-12 col-lg-3">
+                <div class="col-6 col-md-3 col-lg-2">
                     <div class="footer-links">
                         <ul class="footer-list">
                             <li>
@@ -683,12 +1015,55 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-12 col-lg-3">
-                    <div class="footer-links">
-                        <p>Get the latest Update</p>
+                <div class="col-12 col-lg-4 mt-5 mt-lg-0">
+                    <div class="footer-form">
+                        <p class="update">Get the latest Update</p>
+                        <form action="">
+                            <input type="email" name="e-mail" id="e-mail" placeholder="Enter Your Email" required>
+                            <button type="submit" class="email-btn">Subscribe</button>
+                        </form>
+                        <ul class="social-media">
+                            <li>
+                                <a href="" class="media-link">
+                                    <img src="./assets/x.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="media-link">
+                                    <img src="./assets/insta.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="media-link">
+                                    <img src="./assets/fb.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="media-link">
+                                    <img src="./assets/yt.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="city-list" data-aos="fade-right" data-aos-duration="2000">
+                            <li>
+                                <a href="" class="city-links">Delhi</a>
+                            </li>
+                            <li>
+                                <a href="" class="city-links">Mumbai</a>
+                            </li>
+                            <li>
+                                <a href="" class="city-links">Bengaluru</a>
+                            </li>
+                            <li>
+                                <a href="" class="city-links">Dubai</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
+            <hr />
+            <p class="terms-conditions">© 2014-2024 All right reserved by <a>royal Aviation Services Private Limited</a>
+            </p>
         </div>
     </section>
 
@@ -696,6 +1071,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
         </script>
+
+    <!-- Swiper JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- AOS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
